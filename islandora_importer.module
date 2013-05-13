@@ -267,8 +267,8 @@ function islandora_importer_batch_finished($success, array $results, array $ops)
 
     if (user_access('access site reports')) {
       drupal_set_message(t('Batch complete!  View/Download !results or see the !watchdog for details.', array(
-        '!results' => l(t('simple results'), file_create_url($filename)),
-        '!watchdog' => l(t('watchdog log'), 'admin/reports/dblog'),
+        '!results' => filter_xss(l(t('simple results'), file_create_url($filename))),
+        '!watchdog' => filter_xss(l(t('watchdog log'), 'admin/reports/dblog')),
       )), 'info');
     }
     else {
