@@ -33,7 +33,7 @@ function islandora_importer_admin_paths() {
 /**
  * Wrap a module_invoke_all() call.
  */
-function islandora_importer_get_options() {F
+function islandora_importer_get_options() {
   return module_invoke_all('islandora_importer');
 }
 
